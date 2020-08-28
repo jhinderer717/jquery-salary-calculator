@@ -11,10 +11,10 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 Salary calculator
 
-    [ ] create index.html, client.js, jQuery, style files
-        [ ] commit
+    [x] create index.html, client.js, jQuery, style files
+        [x] commit
 
-    [ ] source files, link jQuery to javascript
+    [x] source files, link jQuery to javascript
         [ ] commit
 
     [ ] initiate html with words, table, input fields, submit button, limited styling
