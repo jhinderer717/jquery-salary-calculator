@@ -28,7 +28,8 @@ function getInputsIntoArray(){
         lastName: $('.lastNameIn').val(),
         id: $('.idIn').val(),
         title: $('.titleIn').val(),
-        annualSalary: $('.annualSalaryIn').val()
+        annualSalary: $('.annualSalaryIn').val(),
+        wasDeleted: false
     };
     // view last submission
     console.log(submission);
@@ -59,18 +60,26 @@ function displayStuff() {
     $('.total').replaceWith(`<h2 class="total">Total Monthly Salary Expense = $${monthlyExpense}</h2>`);
     $('.tableBody').empty();
     for ( let i=0; i< inputArray.length; i++ ) {
-        $('.tableBody').append(`
-        <tr class="tableRow">
-            <td class="firstNameOut">${inputArray[i].firstName}</td>
-            <td class="lastNameOut">${inputArray[i].lastName}</td>
-            <td class="idOut">${inputArray[i].id}</td>
-            <td class="titleOut">${inputArray[i].title}</td>
-            <td class="annualSalaryOut">$${inputArray[i].annualSalary}</td>
-            <td><button class="delete">Delete</button></td>
-        </tr>
-        `);
+        if(!inputArray.wasDeleted){
+            $('.tableBody').append(`
+            <tr class="tableRow">
+                <td class="firstNameOut">${inputArray[i].firstName}</td>
+                <td class="lastNameOut">${inputArray[i].lastName}</td>
+                <td class="idOut">${inputArray[i].id}</td>
+                <td class="titleOut">${inputArray[i].title}</td>
+                <td class="annualSalaryOut">$${inputArray[i].annualSalary}</td>
+                <td><button class="delete">Delete</button></td>
+            </tr>
+            `);
+        }
     }
     $('.delete').on('click', deleteRow);
+    $('.delete').on('click', markDeleted);
+}
+
+function markDeleted() {
+    console.log('gotta mark deleted');
+    $(this).change('wasDeleted', true);// continue working here.
 }
 
 function deleteRow() {
