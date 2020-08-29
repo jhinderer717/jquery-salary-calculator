@@ -12,6 +12,10 @@ h1{
     /*justify-content: space-around;*/  /*  default input display to blame?  */
 /*}*/
 
+.emptyCell{
+    width: 20%;
+}
+
 .redClass{
     background-color: red;
     display: block;

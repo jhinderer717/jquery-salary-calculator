@@ -83,11 +83,12 @@ function displayInputs() {
                 <td><button id="button${i}" class="delete">Delete</button></td>
             </tr>
             `);
-        }// output i for how many things should be displayed, have delete row call displayInputs
+        }
     }
     $('.delete').on('click', deleteRow);
     $('.delete').on('click', markDeleted);
     totalMonthlyExpense();
+    return i;
 }
 
 function markDeleted() {
@@ -98,6 +99,7 @@ function markDeleted() {
 
 function deleteRow() {
     console.log('in deleteRow', $(this));
+    
     $(this).parent().parent().remove();
 }
 
