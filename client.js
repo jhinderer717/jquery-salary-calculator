@@ -88,10 +88,10 @@ function displayInputs() {
         if(inputArray[i].wasDeleted === false){// class="oddClass" taken out of table row
             $('.tableBody').append(`
             <tr id="tableRow">
-                <td class="firstNameOut">${numberWithCommas(inputArray[i].firstName)}</td>
-                <td class="lastNameOut">${numberWithCommas(inputArray[i].lastName)}</td>
-                <td class="idOut">${numberWithCommas(inputArray[i].id)}</td>
-                <td class="titleOut">${numberWithCommas(inputArray[i].title)}</td>
+                <td class="firstNameOut">${inputArray[i].firstName}</td>
+                <td class="lastNameOut">${inputArray[i].lastName}</td>
+                <td class="idOut">${inputArray[i].id}</td>
+                <td class="titleOut">${inputArray[i].title}</td>
                 <td class="annualSalaryOut">$${numberWithCommas(inputArray[i].annualSalary)}</td>
                 <td><button id="button${i}" class="delete">Delete</button></td>
             </tr>
