@@ -1,0 +1,30 @@
+h1{
+    font-size: 60px;
+    background-color: forestgreen;
+    -webkit-text-stroke: 1px white;
+    text-align: center;
+    margin: -8px;
+    padding: 20px;
+}
+
+input{
+    /*display: flex;*/                  /*  Flexbox froggy doesn't help me   */
+    /*justify-content: space-around;*/  /*  default input display to blame?  */
+}
+
+.addButton{
+    float: right;
+}
+
+.delete{
+    margin: auto;
+    display: block;
+}
+
+table{ border-collapse: collapse; width: 100%; }
+table, th, td{ border: 1px solid black; }
+tr{ height: 45px; }
+
+.total{
+    float: right;
+}

@@ -9,6 +9,43 @@
     <title>First Weekend HW</title>
 </head>
 <body>
-    
+    <h1>Monthly Expense Calculator</h1>
+    <h2>Add Employee</h2>
+    <input class="firstNameIn" type="text" placeholder="First Name" />
+    <input class="lastNameIn" type="text" placeholder="Last Name" />
+    <input class="idIn" type="text" placeholder="ID" />
+    <input class="titleIn" type="text" placeholder="Title" />
+    <input class="annualSalaryIn" type="text" placeholder="Annual Salary" />
+    <hr />
+    <button class="addButton">Submit</button>
+    <h2>Employees</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Annual Salary</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="firstNameOut">test</td>
+                <td class="lastNameOut">test</td>
+                <td class="idOut">test</td>
+                <td class="titleOut">test</td>
+                <td class="annualSalaryOut">test</td>
+                <td><button class="delete">Delete</button></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="tableFoot" colspan="6"></td>
+            </tr>
+        </tfoot>
+    </table>
+    <h2 class="total">Total Monthly Salary Expense = $0</h2>
 </body>
 </html>

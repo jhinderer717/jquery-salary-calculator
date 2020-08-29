@@ -15,9 +15,9 @@ Salary calculator
         [x] commit
 
     [x] source files, link jQuery to javascript
-        [ ] commit
+        [x] commit
 
-    [ ] initiate html with words, table, input fields, submit button, limited styling
+    [x] initiate html with words, table, input fields, submit button, limited styling
         [ ] commit
 
     [ ] capture click event and get user input
@@ -39,4 +39,7 @@ Salary calculator
         [ ] commit
 
     [ ] conditional red monthly cost
+        [ ] commit
+
+    [ ] finish styling
         [ ] commit
