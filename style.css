@@ -7,10 +7,10 @@ h1{
     padding: 20px;
 }
 
-input{
+/*input{*/
     /*display: flex;*/                  /*  Flexbox froggy doesn't help me   */
     /*justify-content: space-around;*/  /*  default input display to blame?  */
-}
+/*}*/
 
 .addButton{
     float: right;

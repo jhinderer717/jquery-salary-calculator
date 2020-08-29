@@ -30,9 +30,9 @@ Salary calculator
         [x] commit
 
     [x] calculate total monthly cost
-        [ ] commit
+        [x] commit
 
-    [ ] display entered information
+    [x] display entered information
         [ ] commit
 
     [ ] display total monthly cost

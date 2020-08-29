@@ -50,7 +50,34 @@ function totalMonthlyExpense(){
     for ( thing of inputArray ){
         monthlyExpense += (thing.annualSalary / 12 );
     }
-    console.log('monthlyExpense is now', monthlyExpense );
+    console.log('monthlyExpense is now $', monthlyExpense);
+    displayStuff();
+}
+
+function displayStuff() {
+    console.log('in displayStuff');
+    // first entry replace empty table row, append after that
+    if(inputArray.length === 1){
+        $('.firstNameOut').replaceWith(`<td class="firstNameOut">${inputArray[0].firstName}</td>`);
+        $('.lastNameOut').replaceWith(`<td class="lastNameOut">${inputArray[0].lastName}</td>`);
+        $('.idOut').replaceWith(`<td class="idOut">${inputArray[0].id}</td>`);
+        $('.titleOut').replaceWith(`<td class="titleOut">${inputArray[0].title}</td>`);
+        $('.annualSalaryOut').replaceWith(`<td class="annualSalaryOut">$${inputArray[0].annualSalary}</td>`);
+    }
+    else{
+        for ( let i=1; i< inputArray.length; i++ ) {
+            $('.tableBody').append(`
+            <tr>
+            <td class="firstNameOut">${inputArray[i].firstName}</td>
+            <td class="lastNameOut">${inputArray[i].lastName}</td>
+            <td class="idOut">${inputArray[i].id}</td>
+            <td class="titleOut">${inputArray[i].title}</td>
+            <td class="annualSalaryOut">$${inputArray[i].annualSalary}</td>
+            <td><button class="delete">Delete</button></td>
+            </tr>
+            `);
+        }
+    }
 }
 
 console.log('down here!');
