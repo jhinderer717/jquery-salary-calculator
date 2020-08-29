@@ -21,12 +21,12 @@ Salary calculator
         [x] commit
 
     [x] capture click event and get user input
+        [x] commit
+
+    [x] push entered information into an array
         [ ] commit
 
-    [ ] push entered information into an array
-        [ ] commit
-
-    [ ] clear input fields
+    [x] clear input fields
         [ ] commit
 
     [ ] calculate total monthly cost
