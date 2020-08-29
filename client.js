@@ -54,16 +54,13 @@ function totalMonthlyExpense(){
         }
     }
     if(monthlyExpense > 20000){
-        $('.total').replaceWith(`
-        <h2 class="redClass">Total Monthly Salary Expense = $${monthlyExpense}</h2>
+        $('#total').replaceWith(`
+        <h2 id="total" class="redClass">Total Monthly Salary Expense = $${monthlyExpense}</h2>
         `);
     }
     else{
-        /*if ( $('h2').attr('class') ) {  // toggle class?
-            
-        }*/
-        $('.total').replaceWith(`
-        <h2 class="total">Total Monthly Salary Expense = $${monthlyExpense}</h2>
+        $('#total').replaceWith(`
+        <h2 id="total">Total Monthly Salary Expense = $${monthlyExpense}</h2>
         `);
     }
     console.log('monthlyExpense is now $', monthlyExpense);

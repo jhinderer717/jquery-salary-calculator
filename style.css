@@ -32,6 +32,6 @@ table, th, td{ border: 1px solid black; }
 tr{ height: 45px; }
 th{ background-color: lightsteelblue; }
 
-.total{
+#total{
     float: right;
 }
