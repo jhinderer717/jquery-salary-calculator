@@ -41,8 +41,8 @@ Salary calculator
     [x] have delete button remove row
         [x] commit
 
-    [ ] conditional red monthly cost
-        [ ] commit
+    [x] conditional red monthly cost
+        [x] commit
 
     [ ] finish styling
         [ ] commit

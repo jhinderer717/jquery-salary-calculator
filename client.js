@@ -64,7 +64,6 @@ function totalMonthlyExpense(){
         `);
     }
     console.log('monthlyExpense is now $', monthlyExpense);
-    //displayInputs();
 }
 
 function displayInputs() {
