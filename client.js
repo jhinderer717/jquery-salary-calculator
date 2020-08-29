@@ -48,8 +48,10 @@ function getInputsIntoArray(){
 function totalMonthlyExpense(){
     console.log('in totalMonthlyExpense');
     monthlyExpense = 0;
-    for ( thing of inputArray ){
-        monthlyExpense += (thing.annualSalary / 12 );
+    for ( i in inputArray ){
+        if( inputArray[i].wasDeleted === false ){
+            monthlyExpense += (inputArray[i].annualSalary / 12 );
+        }
     }
     console.log('monthlyExpense is now $', monthlyExpense);
     displayStuff();
@@ -80,10 +82,8 @@ function displayStuff() {
 
 function markDeleted() {
     console.log('gotta mark deleted');
-    console.log($(this).text());
-    console.log(Number($(this).attr('id').slice(-1)));
     inputArray[Number($(this).attr('id').slice(-1))].wasDeleted = true;
-    //$(this).change('wasDeleted', true);// continue working here.
+    totalMonthlyExpense();
 }
 
 function deleteRow() {
