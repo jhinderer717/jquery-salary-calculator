@@ -24,10 +24,10 @@ Salary calculator
         [x] commit
 
     [x] push entered information into an array
-        [ ] commit
+        [x] commit
 
     [x] clear input fields
-        [ ] commit
+        [x] commit
 
     [ ] calculate total monthly cost
         [ ] commit
