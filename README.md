@@ -18,9 +18,9 @@ Salary calculator
         [x] commit
 
     [x] initiate html with words, table, input fields, submit button, limited styling
-        [ ] commit
+        [x] commit
 
-    [ ] capture click event and get user input
+    [x] capture click event and get user input
         [ ] commit
 
     [ ] push entered information into an array

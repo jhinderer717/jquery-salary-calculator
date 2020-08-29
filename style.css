@@ -24,6 +24,7 @@ input{
 table{ border-collapse: collapse; width: 100%; }
 table, th, td{ border: 1px solid black; }
 tr{ height: 45px; }
+th{ background-color: lightsteelblue; }
 
 .total{
     float: right;
