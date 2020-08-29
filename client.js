@@ -46,7 +46,8 @@ function getInputsIntoArray(){
 }
 
 // searched how to display large number with commas
-// found here https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+// function found here
+// https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
 
 function numberWithCommas(x) {
     x = x.toString();
@@ -76,7 +77,7 @@ function totalMonthlyExpense(){
         <h2 id="total">Total Monthly Salary Expense = $${stringMonthlyExpense}</h2>
         `);
     }
-    console.log('monthlyExpense is now $', monthlyExpense);
+    console.log('monthlyExpense is now $', stringMonthlyExpense);
 }
 
 function displayInputs() {
