@@ -29,7 +29,7 @@ Salary calculator
     [x] clear input fields
         [x] commit
 
-    [ ] calculate total monthly cost
+    [x] calculate total monthly cost
         [ ] commit
 
     [ ] display entered information
