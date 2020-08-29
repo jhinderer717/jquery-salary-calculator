@@ -33,9 +33,9 @@ Salary calculator
         [x] commit
 
     [x] display entered information
-        [ ] commit
+        [x] commit
 
-    [ ] display total monthly cost
+    [x] display total monthly cost
         [ ] commit
 
     [ ] conditional red monthly cost
