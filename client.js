@@ -45,6 +45,17 @@ function getInputsIntoArray(){
     displayInputs();
 }
 
+// searched how to display large number with commas
+// found here https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+
+function numberWithCommas(x) {
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x = x.replace(pattern, "$1,$2");
+    return x;
+}
+
 function totalMonthlyExpense(){
     console.log('in totalMonthlyExpense');
     monthlyExpense = 0;
@@ -53,14 +64,16 @@ function totalMonthlyExpense(){
             monthlyExpense += (inputArray[i].annualSalary / 12 );
         }
     }
+    monthlyExpense = monthlyExpense.toFixed(2);
+    stringMonthlyExpense = numberWithCommas(monthlyExpense);
     if(monthlyExpense > 20000){
         $('#total').replaceWith(`
-        <h2 id="total" class="redClass">Total Monthly Salary Expense = $${monthlyExpense}</h2>
+        <h2 id="total" class="redClass">Total Monthly Salary Expense = $${stringMonthlyExpense}</h2>
         `);
     }
     else{
         $('#total').replaceWith(`
-        <h2 id="total">Total Monthly Salary Expense = $${monthlyExpense}</h2>
+        <h2 id="total">Total Monthly Salary Expense = $${stringMonthlyExpense}</h2>
         `);
     }
     console.log('monthlyExpense is now $', monthlyExpense);
@@ -68,13 +81,12 @@ function totalMonthlyExpense(){
 
 function displayInputs() {
     console.log('in displayInputs');
-    //$('.total').replaceWith(`<h2 class="total">Total Monthly Salary Expense = $${monthlyExpense}</h2>`);
     $('.tableBody').empty();
     for ( let i=0; i< inputArray.length; i++ ) {
-        console.log(inputArray[i].wasDeleted);
-        if(inputArray[i].wasDeleted === false){
+        console.log('was deleted?', inputArray[i].wasDeleted);
+        if(inputArray[i].wasDeleted === false){// class="oddClass" taken out of table row
             $('.tableBody').append(`
-            <tr class="tableRow">
+            <tr id="tableRow">
                 <td class="firstNameOut">${inputArray[i].firstName}</td>
                 <td class="lastNameOut">${inputArray[i].lastName}</td>
                 <td class="idOut">${inputArray[i].id}</td>
@@ -84,11 +96,18 @@ function displayInputs() {
             </tr>
             `);
         }
+        /*if ( i%2 === 0 ) {
+            console.log('i is even, no color, toggle oddClass off');
+            $('#tableRow').toggleClass('oddClass');
+        }
+        else{
+            console.log('toggle background color, leave oddClass');    An attempt at making odd rows light blue
+        }*/
+        
     }
     $('.delete').on('click', deleteRow);
     $('.delete').on('click', markDeleted);
     totalMonthlyExpense();
-    return i;
 }
 
 function markDeleted() {

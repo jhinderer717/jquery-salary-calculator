@@ -22,6 +22,10 @@ h1{
     float: right;
 }
 
+.oddClass{
+    background-color: powderblue;
+}
+
 .addButton{
     float: right;
 }
