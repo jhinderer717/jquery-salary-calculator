@@ -44,5 +44,8 @@ Salary calculator
     [x] conditional red monthly cost
         [x] commit
 
-    [ ] finish styling
+    [x] finish styling (monthly expense display)
+        [x] commit
+
+    [ ] odd rows different colors?
         [ ] commit
