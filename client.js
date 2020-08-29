@@ -42,7 +42,7 @@ function getInputsIntoArray(){
     $('.idIn').val('');
     $('.titleIn').val('');
     $('.annualSalaryIn').val('');
-    totalMonthlyExpense();
+    displayInputs();
 }
 
 function totalMonthlyExpense(){
@@ -53,13 +53,26 @@ function totalMonthlyExpense(){
             monthlyExpense += (inputArray[i].annualSalary / 12 );
         }
     }
+    if(monthlyExpense > 20000){
+        $('.total').replaceWith(`
+        <h2 class="redClass">Total Monthly Salary Expense = $${monthlyExpense}</h2>
+        `);
+    }
+    else{
+        /*if ( $('h2').attr('class') ) {  // toggle class?
+            
+        }*/
+        $('.total').replaceWith(`
+        <h2 class="total">Total Monthly Salary Expense = $${monthlyExpense}</h2>
+        `);
+    }
     console.log('monthlyExpense is now $', monthlyExpense);
-    displayStuff();
+    //displayInputs();
 }
 
-function displayStuff() {
-    console.log('in displayStuff');
-    $('.total').replaceWith(`<h2 class="total">Total Monthly Salary Expense = $${monthlyExpense}</h2>`);
+function displayInputs() {
+    console.log('in displayInputs');
+    //$('.total').replaceWith(`<h2 class="total">Total Monthly Salary Expense = $${monthlyExpense}</h2>`);
     $('.tableBody').empty();
     for ( let i=0; i< inputArray.length; i++ ) {
         console.log(inputArray[i].wasDeleted);
@@ -78,6 +91,7 @@ function displayStuff() {
     }
     $('.delete').on('click', deleteRow);
     $('.delete').on('click', markDeleted);
+    totalMonthlyExpense();
 }
 
 function markDeleted() {
@@ -89,7 +103,6 @@ function markDeleted() {
 function deleteRow() {
     console.log('in deleteRow', $(this));
     $(this).parent().parent().remove();
-
 }
 
 function deleteNothing(){

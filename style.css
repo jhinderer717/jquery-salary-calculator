@@ -12,6 +12,12 @@ h1{
     /*justify-content: space-around;*/  /*  default input display to blame?  */
 /*}*/
 
+.redClass{
+    background-color: red;
+    display: block;
+    float: right;
+}
+
 .addButton{
     float: right;
 }
