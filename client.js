@@ -60,7 +60,8 @@ function displayStuff() {
     $('.total').replaceWith(`<h2 class="total">Total Monthly Salary Expense = $${monthlyExpense}</h2>`);
     $('.tableBody').empty();
     for ( let i=0; i< inputArray.length; i++ ) {
-        if(!inputArray.wasDeleted){
+        console.log(inputArray[i].wasDeleted);
+        if(inputArray[i].wasDeleted === false){
             $('.tableBody').append(`
             <tr class="tableRow">
                 <td class="firstNameOut">${inputArray[i].firstName}</td>
@@ -68,7 +69,7 @@ function displayStuff() {
                 <td class="idOut">${inputArray[i].id}</td>
                 <td class="titleOut">${inputArray[i].title}</td>
                 <td class="annualSalaryOut">$${inputArray[i].annualSalary}</td>
-                <td><button class="delete">Delete</button></td>
+                <td><button id="button${i}" class="delete">Delete</button></td>
             </tr>
             `);
         }
@@ -79,7 +80,10 @@ function displayStuff() {
 
 function markDeleted() {
     console.log('gotta mark deleted');
-    $(this).change('wasDeleted', true);// continue working here.
+    console.log($(this).text());
+    console.log(Number($(this).attr('id').slice(-1)));
+    inputArray[Number($(this).attr('id').slice(-1))].wasDeleted = true;
+    //$(this).change('wasDeleted', true);// continue working here.
 }
 
 function deleteRow() {
